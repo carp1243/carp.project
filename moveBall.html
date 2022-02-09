@@ -1,0 +1,86 @@
+<div id="ball" style="
+  z-index:5;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:green">
+  
+  <id="ball2" style="
+  z-index:5;
+  position:absolute;
+  left:100px;
+  top:100px;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background:red">
+
+<id="ball3" style="
+z-index:5;
+position:absolute;
+left:250px;
+top:300px;
+width:50px;
+height:50px;
+border-radius:50%;
+background: magenta">
+
+<id="ball4" style="
+z-index:5;
+position:absolute;
+left:0px;
+top:200px;
+width:50px;
+height:50px;
+border-radius:50%;
+background: peru">
+
+
+</div>
+
+
+
+<script>
+
+var velocity = 15;
+var position = 0;
+
+var time = 25;
+var positionX = 0;
+var Xmin = 0;
+var Xmax = 300;
+var reverse = false;
+
+
+// YOUR CODE 
+// ----------------
+function move(){;
+var ball = document.getElementById('ball');
+  if(reverse){
+    positionX = positionX - velocity;
+    ball.style.left = positionX + "px";
+  }else {
+    positionX = positionX + velocity;
+    ball.style.left = positionX +"px";
+  }
+
+  if(positionX > Xmax || positionX === Xmin){
+    reverse = !reverse;
+  }
+}
+var ball2 = document.getElementById('ball2');
+var ball3 = document.getElementById('ball3');
+
+
+
+setInterval(move, time);
+
+
+    
+
+
+
+</script>
